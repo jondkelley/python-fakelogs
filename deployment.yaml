@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: fakelogs1
+  name: fakelogs1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fakelogs1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fakelogs1
+    spec:
+      containers:
+      - image: jondkelley/python-fakelogs:latest
+        name: fakelogs1
+        imagePullPolicy: Never
+        resources: {}
+        ports:
+          - containerPort: 3000
+status: {}
+
