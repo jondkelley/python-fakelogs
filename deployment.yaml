@@ -20,7 +20,6 @@ spec:
       containers:
       - image: jondkelley/python-fakelogs:latest
         name: fakelogs1
-        imagePullPolicy: Never
         resources: {}
         ports:
           - containerPort: 3000
